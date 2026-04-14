@@ -1,13 +1,8 @@
-from caesar import caesar_encrypt
+import csv
 
-def encrypt_single_pass(filename):
-    # Leer la contraseña del archivo
-    with open(filename, 'r') as file:
-        password = file.read().strip()
-    
-    # Encriptar la contraseña
-    encrypted_password = caesar_encrypt(password)
-    
-    # Sobrescribir el archivo con la contraseña encriptada
-    with open(filename, 'w') as file:
-        file.write(encrypted_password)
+def encrypt_passwords_in_file(filename):
+    with open(filename, mode='r') as file:
+        reader = csv.reader(file)
+        
+        for row in reader:
+            print(row)
