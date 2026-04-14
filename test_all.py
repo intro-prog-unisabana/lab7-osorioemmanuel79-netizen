@@ -193,8 +193,3 @@ class TestMainProgram:
         assert rows[1] == ["alpha-site.com", "alice", caesar_encrypt("plaintextalpha")]
         assert rows[2] == ["beta-site.com", "bob", caesar_encrypt("plaintextbeta")]
 
-
-if __name__ == "__main__":
-    import pytest
-
-    
